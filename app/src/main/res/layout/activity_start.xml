@@ -40,6 +40,16 @@
             android:id = "@+id/viewpager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id = "@+id/floatingBtn"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+
+            />
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -54,5 +64,7 @@
 
 
     </android.support.design.widget.NavigationView>
+
+
 
 </android.support.v4.widget.DrawerLayout>
