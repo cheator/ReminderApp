@@ -1,20 +1,23 @@
 package devcheat.ru.myapplication.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import devcheat.ru.myapplication.R;
 import devcheat.ru.myapplication.fragments.ExampleFragment;
 
 public class TabPagerFragmenAdapter extends FragmentPagerAdapter {
 
     private String[] tabs;
-    public TabPagerFragmenAdapter(FragmentManager fm) {
+
+    public TabPagerFragmenAdapter(FragmentManager fm, Context ct) {
         super(fm);
         tabs = new String[]{
-                "Tab 1",
-                "Tab 2",
-                "Tab 3"
+                ct.getResources().getString(R.string.TabOneName),
+                ct.getResources().getString(R.string.TabTwoName),
+                ct.getResources().getString(R.string.TabTreeName)
         };
 
     }

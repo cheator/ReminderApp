@@ -2,7 +2,10 @@ package devcheat.ru.myapplication;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import devcheat.ru.myapplication.adapter.TabPagerFragmenAdapter;
 
@@ -21,6 +25,8 @@ public class StartActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager ;
     private ActionBarDrawerToggle toggle;
+    private FloatingActionButton flBtn;
+    private CoordinatorLayout cor;
 
 
     @Override
@@ -30,15 +36,28 @@ public class StartActivity extends AppCompatActivity {
         setContentView(MAINLAYOT);
 
 
+        intiFloatingBtn();
         intiToolBar();
         intinavigationView();
 
         initTabs();
     }
 
+    private void intiFloatingBtn() {
+        cor = (CoordinatorLayout) findViewById(R.id.CoordinatorID);
+        flBtn = (FloatingActionButton) findViewById(R.id.floatingBtn);
+        flBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(cor ,"Hi!",Snackbar.LENGTH_SHORT ).show();
+            }
+        });
+
+    }
+
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewpager) ;
-        TabPagerFragmenAdapter adapter = new TabPagerFragmenAdapter(getSupportFragmentManager());
+        TabPagerFragmenAdapter adapter = new TabPagerFragmenAdapter(getSupportFragmentManager() , this);
         viewPager.setAdapter(adapter);
 
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
@@ -61,9 +80,7 @@ public class StartActivity extends AppCompatActivity {
 
     private void intinavigationView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.layout_drawer);
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toggle = new ActionBarDrawerToggle(
+          toggle = new ActionBarDrawerToggle(
                 this,
                 drawerLayout,
                 toolbar,

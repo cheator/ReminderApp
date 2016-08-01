@@ -10,7 +10,9 @@
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/CoordinatorID"
+        >
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -20,13 +22,17 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"/>
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                android:background="?attr/colorPrimary"
+
+                />
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabIndicatorHeight="6dp"
+                app:tabTextColor="@color/white"
                 app:tabIndicatorColor="@color/white"
                 app:tabSelectedTextColor="@color/white"
                 />
@@ -39,16 +45,17 @@
             android:layout_height="match_parent"
             android:id = "@+id/viewpager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:theme="@style/AppDefault"
             />
+
         <android.support.design.widget.FloatingActionButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id = "@+id/floatingBtn"
             android:src="@android:drawable/ic_menu_agenda"
             android:layout_gravity="end|bottom"
-            android:layout_margin="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_vertical_margin"
-
+            android:layout_margin="20dp"
+            app:pressedTranslationZ="12dp"
             />
 
     </android.support.design.widget.CoordinatorLayout>
