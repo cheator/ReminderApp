@@ -11,15 +11,16 @@ import devcheat.ru.myapplication.fragments.ExampleFragment;
 public class TabPagerFragmenAdapter extends FragmentPagerAdapter {
 
     private String[] tabs;
+    private Context context;
 
     public TabPagerFragmenAdapter(FragmentManager fm, Context ct) {
         super(fm);
+        this.context = ct;
         tabs = new String[]{
-                ct.getResources().getString(R.string.TabOneName),
-                ct.getResources().getString(R.string.TabTwoName),
-                ct.getResources().getString(R.string.TabTreeName)
+              context.getString(R.string.TabOneName),
+              context.getString(R.string.TabTwoName),
+              context.getString(R.string.TabTreeName)
         };
-
     }
 
     @Override

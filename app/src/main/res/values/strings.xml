@@ -8,8 +8,9 @@
     <string name ="search_title">searchp</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="TabOneName">Задачи</string>
-    <string name="TabTwoName">Напоминания</string>
-    <string name="TabTreeName">1</string>
+
+    <string name="TabOneName">TODO</string>
+    <string name="TabTwoName">Items</string>
+    <string name="TabTreeName">Tasks</string>
 
 </resources>
