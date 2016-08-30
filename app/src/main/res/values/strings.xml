@@ -9,8 +9,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="TabOneName">TODO</string>
-    <string name="TabTwoName">Items</string>
-    <string name="TabTreeName">Tasks</string>
+    <string name="TabTODO">TODO</string>
+    <string name="TabHistory">History</string>
+    <string name="TabTasks">Tasks</string>
 
 </resources>

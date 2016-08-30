@@ -15,7 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import devcheat.ru.myapplication.adapter.TabPagerFragmenAdapter;
+import devcheat.ru.myapplication.adapter.TabsFragmenAdapter;
 
 public class StartActivity extends AppCompatActivity {
     private static final int MAINLAYOT = R.layout.activity_start;
@@ -57,7 +57,7 @@ public class StartActivity extends AppCompatActivity {
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewpager) ;
-        TabPagerFragmenAdapter adapter = new TabPagerFragmenAdapter(getSupportFragmentManager() , this);
+        TabsFragmenAdapter adapter = new TabsFragmenAdapter(getSupportFragmentManager() , this);
         viewPager.setAdapter(adapter);
 
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
